@@ -137,8 +137,9 @@ const UtbList = () => {
             </div>
             {/* {selectedSchoolId === school.id ? "Dölj information" : "Visa mer"} */}
             {selectedObjekt === school && (
-              <div className="objekt-innehåll">
-                <p>neger</p>
+              <div className="">
+				{school.points}
+
               </div>
             )}
 
