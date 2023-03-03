@@ -103,7 +103,7 @@ const UtbList = () => {
     <div className="h-full w-screen flex-col flex  justify-center items-center">
       {schoolInfo.map((school) => (
         <motion.div
-          className=" even:bg-lightgreen even:text-darkgreen  odd:bg-ljusrosa odd:text-darkpink  flex flex-col h-1/5 w-1/2 my-1 drop-shadow-2xl cursor-pointer "
+          className=" even:bg-lightgreen even:text-darkgreen  odd:bg-ljusrosa odd:text-darkpink  flex flex-col h-fit w-1/2 my-1 drop-shadow-2xl cursor-pointer "
           initial="offscreen"
           whileInView="onscreen"
           viewport={{ once: false, amount: 0.8 }}
@@ -126,7 +126,7 @@ const UtbList = () => {
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="w-10 h-10"
+                class="w-6 h-6"
               >
                 <path
                   stroke-linecap="round"
@@ -135,14 +135,16 @@ const UtbList = () => {
                 />
               </svg>
             </div>
-            {/* {selectedSchoolId === school.id ? "Dölj information" : "Visa mer"} */}
+
             {selectedObjekt === school && (
               <div className="">
-				{school.points}
-
+                {school.points.map((point) => (
+                  <div className="" key={school.id}>
+					{point}
+				  </div>
+                ))}
               </div>
             )}
-
           </div>
           {/* ))} */}
         </motion.div>
