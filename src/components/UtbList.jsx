@@ -119,7 +119,7 @@ const UtbList = () => {
             <p className="font-myfont3 text-base md:text-lg py-0 px-2">
               {school.yrke}
             </p>
-            <div className="px-3">
+            <div className="px-3 pb-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -137,7 +137,7 @@ const UtbList = () => {
             </div>
 
             {selectedObjekt === school && (
-              <div className="">
+              <div className="h-fit">
                 {school.points.map((point) => (
                   <div className="" key={school.id}>
 					{point}

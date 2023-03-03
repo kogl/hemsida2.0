@@ -1,6 +1,6 @@
 import React from "react";
 // import React, { useRef } from "react";
-import Phone from "../img/github.svg";
+
 
 // import { useSpring, animated } from "react-spring";
 // import "./CircleText.css";

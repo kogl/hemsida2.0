@@ -61,14 +61,14 @@ const Start = () => {
           <div className="w-full h-2/5 bg-vitt  justify-end items-center rounded-tr-full flex flex-col	">
             <h1 className="font-myfont4  text-rubrik">MER</h1>
             <h1 className="font-myfont4  text-rubrik mb-0 pb-0">OM</h1>
-            <motion.div className="">
+            <motion.div className="cursor-pointer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="#18FFBD"
-                class="w-16 h-16"
+                className="w-16 h-16"
               >
                 <path
                   stroke-linecap="round"

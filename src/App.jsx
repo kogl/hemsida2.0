@@ -24,7 +24,7 @@ function App() {
       {/* <CV />  */}
       {/* <Portfolio />  */}
       {/* <Ovrigt />  */}
-	<All /> 
+      <All />
 
       {/* <Routes>
         <Route path="/" element={<All />} />
