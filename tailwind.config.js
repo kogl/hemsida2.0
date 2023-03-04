@@ -57,7 +57,7 @@ module.exports = withMT({
 				'myfont': ['Montserrat', 'sans-serif'],
 				'myfont2': ['Poppins', 'sans-serif'],
 				'myfont3': ['Ubuntu', 'sans-serif'],
-				'myfont4': ['Megrim', 'sans-serif'],
+				'myfont4': ['Righteous', 'sans-serif'],
 
 			},
 
@@ -73,6 +73,11 @@ module.exports = withMT({
 					lineHeight: '0.8'   // custom line height
 				}],
 				'header': ['11.5rem', {
+					letterSpacing: '-0.10em', // custom letter spacing
+
+					lineHeight: '0.8'   // custom line height
+				}],      // custom font size
+				'liten': ['3em', {
 					letterSpacing: '-0.10em', // custom letter spacing
 
 					lineHeight: '0.8'   // custom line height

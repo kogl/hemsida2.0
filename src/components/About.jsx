@@ -1,6 +1,6 @@
 import React from "react";
-// import Me from "../img/me.jpg";
-// import Portfolio from "./Portfolio";
+import AboutText from "./AboutText";
+
 // import { motion } from "framer-motion";
 const About = () => {
   return (
@@ -10,35 +10,22 @@ const About = () => {
       </div>
 
       <div className="bg-vitt flex-col w-1/3 justify-center items-start h-screen rounded-br-full">
-        <h1 className="font-myfont4  text-rubrik flex flex-col justify-center items-center w-full cursor-none">
+        <h1 className="font-myfont4 text-liten  md:text-rubrika flex flex-col justify-center items-center w-full cursor-none">
           MIG
         </h1>
       </div>
 
       <div className="justify-center items-start text-about flex flex-col">
-        <p className="w-4/5 text-justify py-4 px-8 text-about font-myfont text-darkgreen">
-          Jag är en ambitiös och engagerad person med stor passion för
-          programmering och webbutveckling. Jag har erfarenhet av både front-end
-          och backend-utveckling.
-        </p>
-
-        <p className="w-4/5 text-justify py-4 px-8 text-about font-myfont text-darkgreen ">
-          Jag brinner för att lära mig nya saker, förbättra mina färdigheter och
-          jag älskar få förvandla mina ideer och fantasier till verklighet
-        </p>
-
-        <div className="px-8 font-myfont3 font-bold flex justify-end items-end ">
-          <h4>Kontakta Mig!</h4>
-        </div>
+        <AboutText />
         <div className="flex flex-row px-8 py-6">
           <div className="bg-vitt rounded-full px-2 py-2 mr-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              stroke-width="1.5"
+              strokeWidth="1.5"
               stroke="currentColor"
-              className="w-16 h-16 cursor-pointer"
+              className="w-8 h-8 mt-1 md:w-16 md:h-16 cursor-pointer"
             >
               <path
                 strokeLinecap="round"
@@ -54,7 +41,7 @@ const About = () => {
               viewBox="0 0 24 24"
               strokeWidth="1.5"
               stroke="currentColor"
-              class="w-16 h-16 cursor-pointer"
+              className="w-8 h-8 mt-1 md:w-16 md:h-16 cursor-pointer"
             >
               <path
                 strokeLinecap="round"
@@ -64,7 +51,6 @@ const About = () => {
             </svg>
           </div>
         </div>
-
       </div>
     </div>
   );

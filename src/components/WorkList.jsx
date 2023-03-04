@@ -53,10 +53,10 @@ const WorkList = () => {
     }
   };
   return (
-    <div className="h-1/2 w-screen flex-row flex  justify-center items-center">
+    <div className="h-screen md:h-1/2 md:w-screen md:flex-row md:flex  justify-center items-center ">
       {workInfo.map((work) => (
         <div
-          className=" even:bg-lightgreen even:text-mediumgreen  odd:bg-ljusrosa odd:text-darkpink flex flex-row h-fit w-1/5 mx-5 drop-shadow-2xl cursor-pointer"
+          className=" even:bg-lightgreen even:text-mediumgreen  odd:bg-ljusrosa odd:text-darkpink flex flex-row h-fit md:w-1/5 w-screen md:mx-5 drop-shadow-2xl cursor-pointer"
           key={work.id}
           onClick={() => handleObjektClick(work)}
         >
@@ -70,13 +70,13 @@ const WorkList = () => {
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
-                stroke-width="1.5"
+                strokeWidth="1.5"
                 stroke="currentColor"
-                class="w-6 h-6"
+                className="w-6 h-6"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   d="M3 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062A1.125 1.125 0 013 16.81V8.688zM12.75 8.688c0-.864.933-1.405 1.683-.977l7.108 4.062a1.125 1.125 0 010 1.953l-7.108 4.062a1.125 1.125 0 01-1.683-.977V8.688z"
                 />
               </svg>

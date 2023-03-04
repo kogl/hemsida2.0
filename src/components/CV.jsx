@@ -10,8 +10,8 @@ const CV = () => {
     <div className="h-screen w-screen ">
   
       <Work />
-	  <Ovrigt/>
       <Utbildning />
+	  <Ovrigt/>
       {/* <Portfolio /> */}
 	  
     </div>

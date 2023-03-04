@@ -7,23 +7,23 @@ import MenuList from "./MenuList";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+  //   const [isVisible, setIsVisible] = useState(true);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (window.pageYOffset > 0) {
-        setIsVisible(true);
-      } else {
-        setIsVisible(false);
-      }
-    };
+  //   useEffect(() => {
+  //     const handleScroll = () => {
+  //       if (window.pageYOffset > 0) {
+  //         setIsVisible(true);
+  //       } else {
+  //         setIsVisible(false);
+  //       }
+  //     };
 
-    window.addEventListener("scroll", handleScroll);
+  //     window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //     return () => {
+  //       window.removeEventListener("scroll", handleScroll);
+  //     };
+  //   }, []);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -35,9 +35,9 @@ const Header = () => {
   };
 
   return (
-    <div className="w-screen items-center justify-between md:h-36 sm:10  flex flex-row drop-shadow-2xl fixed top-0 left-0 right-0 z-50	">
-      <div className={`fixed top-0 w-full ${isVisible ? "block" : "hidden"}`}>
-        <div className=" text-black ml-4 font-myfont4 text-lg  ">
+    <div className="w-screen items-center justify-between md:h-36 h-12 flex flex-row drop-shadow-2xl fixed top-0 left-0 right-0 z-50	bg-green-400">
+      <div className="fixed top-0 w-full text-black ml-4 font-myfont4 text-sm md:text-lg flex flex-row ">
+        <div className="justify-start items-end bg-red-200 ">
           Oskar Ljungdahl
         </div>
 
@@ -48,7 +48,7 @@ const Header = () => {
             viewBox="0 0 24 24"
             strokeWidth="1"
             stroke="white"
-            className="w-10 h-10 z-50 fixed right-10 top-10 pa-4 bg-lightgreen rounded-full cursor-pointer"
+            className="w-10 h-10 z-50 fixed right-5 top-5 pa-4 bg-lightgreen rounded-full cursor-pointer"
             onClick={toggleMenu}
           >
             <path
@@ -64,7 +64,7 @@ const Header = () => {
             viewBox="0 0 24 24"
             strokeWidth="1"
             stroke="white"
-            className="w-10 h-10 z-50 fixed right-10 top-10 pa-4 bg-lightgreen rounded-full cursor-pointer"
+            className="w-10 h-10 z-50 fixed right-5 top-5 pa-4 bg-lightgreen rounded-full cursor-pointer"
             onClick={toggleMenu}
           >
             <path
@@ -76,10 +76,11 @@ const Header = () => {
         )}
 
         <motion.div
-          className="fixed right-0 top-0 w-1/5 h-screen bg-white shadow-2xl "
+          className="fixed right-0 top-0 md:w-1/5 h-screen sm:w-32 justify-center items-start flex bg-white shadow-2xl"
           animate={isOpen ? "open" : "closed"}
           variants={variants}
-          transition={{ type: "spring", damping: 15 }}>
+          transition={{ type: "spring", damping: 15 }}
+        >
           <MenuList />
         </motion.div>
       </div>

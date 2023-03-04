@@ -140,23 +140,20 @@ const Ovrigt = () => {
   }, {});
 
   return (
-    <div className="text-svart h-screen w-screen justify-evenly items-center flex flex-row text-center  bg-white md:bg-waveupp md:bg-no-repeat md:bg-cover ">
-      <div className="flex flex-col">
-        <div className="text-rubrik font-myfont4"></div>
-      </div>
+    <div className="text-svart h-screen w-screen justify-center items-center flex flex-row text-center  bg-white md:bg-waveupp md:bg-no-repeat md:bg-cover ">
+        <div className="text-rubrik font-myfont4">Vad Kan Jag</div>
       {Object.entries(genreMap).map(([genre, skills]) => (
-        <div className="" key={genre}>
-          <div className=" justify-center items-center flex flex-row text-myfont3 text-about">
+        <div className="justify-center items-center flex flex-col text-myfont3 text-about mr-4" key={genre}>
+          {/* <div className=" justify-center items-center flex flex-row text-myfont3 text-about" > */}
             {genre}
-          </div>
+          {/* </div> */}
           {skills.map((skill) => (
             <div
-              class="flex flex-col pt-2 px-4 mt-2 h-16 w-36 justify-evenly items-center odd:bg-lightgreen even:bg-ljusrosa  odd:text-darkgreen even:text-darkpink font-myfont3 drop-shadow-2xl"
+              className=" flex flex-col pt-2 px-4 mt-2 h-16 w-36 justify-center items-center odd:bg-lightgreen even:bg-ljusrosa  odd:text-darkgreen even:text-darkpink font-myfont3 drop-shadow-2xl mx-0"
               key={genre}
             >
-              <div class=" justify-evenly items-center " key={skill.name}>
                 {skill.name}
-              </div>
+              
             </div>
           ))}
         </div>
