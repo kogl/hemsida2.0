@@ -1,7 +1,7 @@
 import React from "react";
 // import Me from "../img/me.jpg";
 // import Portfolio from "./Portfolio";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 const About = () => {
   return (
     <div className="h-screen bg-lightgreen flex flex-row">
@@ -10,7 +10,7 @@ const About = () => {
       </div>
 
       <div className="bg-vitt flex-col w-1/3 justify-center items-start h-screen rounded-br-full">
-        <h1 className="font-myfont4  text-rubrik flex flex-col justify-center items-center w-full ">
+        <h1 className="font-myfont4  text-rubrik flex flex-col justify-center items-center w-full cursor-none">
           MIG
         </h1>
       </div>
@@ -64,9 +64,8 @@ const About = () => {
             </svg>
           </div>
         </div>
+
       </div>
-
-
     </div>
   );
 };

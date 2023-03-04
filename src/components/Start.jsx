@@ -13,7 +13,7 @@ import {
 
 // import "../animate.css";
 
-const test = ">";
+
 
 const Start = () => {
   //   const [isAnimated, setIsAnimated] = useState(false);
@@ -59,8 +59,8 @@ const Start = () => {
         </div>
         <div className="bg-lightgreen h-screen w-screen justify-center items-end flex">
           <div className="w-full h-2/5 bg-vitt  justify-end items-center rounded-tr-full flex flex-col	">
-            <h1 className="font-myfont4  text-rubrik">MER</h1>
-            <h1 className="font-myfont4  text-rubrik mb-0 pb-0">OM</h1>
+            <h1 className="font-myfont4  text-rubrik cursor-none">MER</h1>
+            <h1 className="font-myfont4  text-rubrik mb-0 pb-0 cursor-none	">OM</h1>
             <motion.div className="cursor-pointer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

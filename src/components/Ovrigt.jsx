@@ -1,118 +1,167 @@
 import React from "react";
 
-const skills = [
+const Skills = [
   {
     id: 1,
     name: "HTML5",
     bild: "../img/frodo.jpg",
+    genre: "WEB",
   },
   {
     id: 2,
     name: "CSS",
     bild: "../img/frodo.jpg",
+    genre: "Style",
   },
   {
     id: 3,
     name: "JavaScript",
     bild: "../img/frodo.jpg",
+    genre: "WEB",
   },
   {
     id: 4,
-    name: "Swift",
+    name: "SwiftIOS",
     bild: "../img/frodo.jpg",
+    genre: "Other Programing",
   },
   {
     id: 5,
-    name: "VueJs",
+    name: "VueJS",
     bild: "../img/frodo.jpg",
+    genre: "WEB",
   },
   {
     id: 6,
     name: "React",
     bild: "../img/frodo.jpg",
+    genre: "WEB",
   },
   {
     id: 7,
     name: "Vuetify",
     bild: "../img/frodo.jpg",
+    genre: "Style",
   },
   {
     id: 8,
     name: "Bootstrap",
     bild: "../img/frodo.jpg",
+    genre: "Style",
   },
 
   {
     id: 9,
     name: "Blender",
     bild: "../img/frodo.jpg",
+    genre: "Other",
   },
   {
     id: 10,
     name: "C#/.Net",
     bild: "../img/frodo.jpg",
+    genre: "Other Programing",
   },
   {
     id: 11,
     name: "Adobepaketet",
     bild: "../img/frodo.jpg",
+    genre: "Other",
   },
   {
     id: 12,
-    name: "Officepaketet",
+    name: "MSOffice",
     bild: "../img/close.svg",
+    genre: "Other",
   },
   {
     id: 13,
     name: "Apple OS",
     bild: "../img/frodo.jpg",
+    genre: "Other",
   },
   {
     id: 14,
     name: "ExpressJS",
     bild: "../img/frodo.jpg",
+    genre: "Backend",
   },
   {
     id: 15,
     name: "NodeJS",
     bild: "../img/frodo.jpg",
+    genre: "Backend",
   },
   {
     id: 16,
     name: "Tailwind",
     bild: "../img/frodo.jpg",
+    genre: "Style",
+  },
+  {
+    id: 17,
+    name: "Figma",
+    bild: "../img/frodo.jpg",
+    genre: "Other",
+  },
+  {
+    id: 18,
+    name: "WindowsOS",
+    bild: "../img/frodo.jpg",
+    genre: "Other",
+  },
+  {
+    id: 19,
+    name: "iWork Suite",
+    bild: "../img/frodo.jpg",
+    genre: "Other",
+  },
+  {
+    id: 20,
+    name: "MongoDB",
+    bild: "../img/frodo.jpg",
+    genre: "Backend",
+  },
+  {
+    id: 21,
+    name: "ViteJS",
+    bild: "../img/frodo.jpg",
+    genre: "WEB",
   },
 ];
 
 const Ovrigt = () => {
-  return (
-    // <div className="flex flex-col items-start w-screen h-max md:bg-wave2 md:bg-no-repeat md:bg-cover bg-vitt">
-    //   <div className="h-1/2 w-screen bg-red-400 flex flex-col justify-center items-center ">
-    //     <h1>hej</h1>
-    //   </div>
+  const genreMap = Skills.reduce((acc, skill) => {
+    if (!acc[skill.genre]) {
+      acc[skill.genre] = [];
+    }
+    acc[skill.genre].push(skill);
+    return acc;
+  }, {});
 
-    //   <div className=" flex justify-center items-center w-screen h-screen">
-    //     <div className="md:grid-cols-3 md:grid-row-5 md:grid w-1/2  justify-center center-items ">
-    //       {skills.map((skill) => (
-    //         <div
-    //           className=" even:bg-bajen even:font-myfont1 even:text-white odd:font-myfont3 odd:bg-white drop-shadow-2xl px-2 py-2  my-2 mx-2"
-    //           key={skill.id}
-    //         >
-    //           <h3 className="flex justify-center items-center text-xl font-myfont3 text-bold">
-    //             {skill.name}
-    //           </h3>
-    //         </div>
-    //       ))}
-    //     </div>
-    //   </div>
-    // </div>
-    <div className="flex flex-col  w-screen h-fit bg-wave2 bg-no-repeat bg-cover bg-vitt">
-      <div className="">
-        <div className=""></div>
+  return (
+    <div className="text-svart h-screen w-screen justify-evenly items-center flex flex-row text-center  bg-white md:bg-waveupp md:bg-no-repeat md:bg-cover ">
+      <div className="flex flex-col">
+        <div className="text-rubrik font-myfont4"></div>
       </div>
-      <div className="">
-        <div className=""></div>
-      </div>
+      {Object.entries(genreMap).map(([genre, skills]) => (
+        <div className="" key={genre}>
+          <div className=" justify-center items-center flex flex-row text-myfont3 text-about">
+            {genre}
+          </div>
+          {skills.map((skill) => (
+            <div
+              class="flex flex-col pt-2 px-4 mt-2 h-16 w-36 justify-evenly items-center odd:bg-lightgreen even:bg-ljusrosa  odd:text-darkgreen even:text-darkpink font-myfont3 drop-shadow-2xl"
+              key={genre}
+            >
+              <div class=" justify-evenly items-center " key={skill.name}>
+                {skill.name}
+              </div>
+            </div>
+          ))}
+        </div>
+      ))}
+
     </div>
   );
 };

@@ -65,7 +65,7 @@ const WorkList = () => {
             <p className="font-myfont3 text-base md:text-lg py-0 px-2">
               {work.place}
             </p>
-            <div className="px-3 flex flex-row">
+            <div className="p-3 flex flex-row">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

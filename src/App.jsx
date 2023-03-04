@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+// import { Routes, Route } from "react-router-dom";
 
 // import { ParallaxProvider } from "react-scroll-parallax";
 // import { Parallax } from "react-scroll-parallax";
@@ -7,8 +7,8 @@ import { Routes, Route } from "react-router-dom";
 
 import "./App.css";
 import Header from "./components/Header";
-import Start from "./components/Start";
-import About from "./components/About";
+// import Start from "./components/Start";
+// import About from "./components/About";
 // import CV from "./components/CV";
 // import Kontakt from "./components/Kontakt";
 // import Portfolio from "./components/Portfolio";
