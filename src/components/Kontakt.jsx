@@ -2,10 +2,10 @@ import React from "react";
 
 const Kontakt = () => {
   return (
-    <div className="h-screen w-screen bg-white flex-row">
+    <div className="h-fit w-screen bg-white flex-row">
       <div className="text-svart h-screen w-screen justify-evenly items-center flex flex-row text-center md:bg-wave4 md:bg-no-repeat md:bg-cover ">
         <div className=" ">
-          <p className="text-rubrik font-myfont4 ">Kontakt</p>
+          <p className="text-liten md:text-rubrik font-myfont4 ">Kontakt</p>
         </div>
         <div className=" flex-col w-1/2 ">
           <div className="text-xl font-myfont2 ">Kontakta mig!</div>

@@ -35,9 +35,9 @@ const Header = () => {
   };
 
   return (
-    <div className="w-screen items-center justify-between md:h-36 h-12 flex flex-row drop-shadow-2xl fixed top-0 left-0 right-0 z-50	bg-green-400">
+<div className="w-screen items-center justify-between md:h-36 h-12 flex flex-row drop-shadow-2xl fixed top-0 left-0 right-0 z-50">
       <div className="fixed top-0 w-full text-black ml-4 font-myfont4 text-sm md:text-lg flex flex-row ">
-        <div className="justify-start items-end bg-red-200 ">
+        <div className="justify-start items-end text-vitt ">
           Oskar Ljungdahl
         </div>
 

@@ -100,10 +100,10 @@ const UtbList = () => {
   };
 
   return (
-    <div className="h-full w-screen flex-col flex  justify-center items-center">
+    <div className="h-fit w-screen flex-col flex justify-center items-center">
       {schoolInfo.map((school) => (
         <motion.div
-          className=" even:bg-lightgreen even:text-darkgreen  odd:bg-ljusrosa odd:text-darkpink  flex flex-col h-fit w-1/2 my-1 drop-shadow-2xl cursor-pointer "
+          className=" even:bg-lightgreen even:text-darkgreen  odd:bg-white odd:text-gray-400  flex flex-col h-fit w-screen md:w-1/2 my-1 drop-shadow-2xl cursor-pointer "
           initial="offscreen"
           whileInView="onscreen"
           viewport={{ once: false, amount: 0.8 }}
@@ -112,7 +112,7 @@ const UtbList = () => {
           ref={ref}
           onClick={() => handleObjektClick(school)}
         >
-          <div className="px-3 flex-col flex ">
+          <div className="px-3 flex flex-col">
             <h3 className="font-myfont3 md:text-2xl px-2 pt-2">
               {school.place}
             </h3>

@@ -7,7 +7,7 @@ const MenuList = () => {
   };
 
   return (
-    <div className="font-myfont2 text-4xl  flex flex-col justify-center items-center mt-24 pr-12 cursor-pointer">
+    <div className="font-myfont2 text-4xl  flex flex-col justify-center items-center mt-24  cursor-pointer">
       <div className="flex flex-row justify-center items-center py-3">
         <svg
           xmlns="http://www.w3.org/2000/svg"

@@ -10,7 +10,7 @@ const About = () => {
       </div>
 
       <div className="bg-vitt flex-col w-1/3 justify-center items-start h-screen rounded-br-full">
-        <h1 className="font-myfont4 text-liten  md:text-rubrika flex flex-col justify-center items-center w-full cursor-none">
+        <h1 className="font-myfont4 text-liten  md:text-rubrik flex flex-col justify-center items-center w-full cursor-none">
           MIG
         </h1>
       </div>

@@ -15,9 +15,9 @@ module.exports = withMT({
 
 			'full': '9999px',
 
-			'4xl':'50px',
-			'10xl':'150px'
-		  },
+			'4xl': '50px',
+			'10xl': '150px'
+		},
 		letterSpacing: {
 			tightest: '-.075em',
 		},
@@ -115,9 +115,10 @@ module.exports = withMT({
 				'bg': "url('/bg.jpg')",
 				'bgme': "url('img/bgme.png')",
 				'aroowdn': "url('img/arrowDown.svg')",
-			
+
 
 				'wave2': "url('img/waveright.svg')",
+				'waver': "url('img/waveright2.svg')",
 				'wave3': "url('img/waveleft.svg')",
 				'wave4': "url('img/wavewave.svg')",
 				'waveupp': "url('img/waveupp2.svg')",

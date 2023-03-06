@@ -34,9 +34,39 @@ const workInfo = [
   },
   {
     id: 3,
-    place: "ABBA HairCare",
+    place: "AbbaHaircare",
     yrke: "Säljare",
     besk: " Jag har erfarenhet av att sälja saxar och andra frisörprodukter till olika frisörsalonger. Under min tid på företaget har jag utvecklat färdigheter för att söka upp nya kunder och demonstrera olika typer av produkter för dem",
+    points: [
+      "- Försäljnig av saxar och andra frisörprodukter till olika frisörsalonger  .",
+      "- Söka upp nya kunder och demostreara olika typer av produkter ",
+    ],
+  },
+  {
+    id: 5,
+    place: "ITMaskinen",
+    yrke: "Praktik",
+    besk: "....",
+    points: [
+      "- Försäljnig av saxar och andra frisörprodukter till olika frisörsalonger  .",
+      "- Söka upp nya kunder och demostreara olika typer av produkter ",
+    ],
+  },
+  {
+    id: 6,
+    place: "WX3",
+    yrke: "Praktik",
+    besk: "....",
+    points: [
+      "- Försäljnig av saxar och andra frisörprodukter till olika frisörsalonger  .",
+      "- Söka upp nya kunder och demostreara olika typer av produkter ",
+    ],
+  },
+  {
+    id: 7,
+    place: "VattenInfo",
+    yrke: "Praktik",
+    besk: "....",
     points: [
       "- Försäljnig av saxar och andra frisörprodukter till olika frisörsalonger  .",
       "- Söka upp nya kunder och demostreara olika typer av produkter ",
@@ -53,10 +83,10 @@ const WorkList = () => {
     }
   };
   return (
-    <div className="h-screen md:h-1/2 md:w-screen md:flex-row md:flex  justify-center items-center ">
+    <div className="h-fit md:h-1/2 md:w-screen md:flex-row md:flex  justify-center items-center ">
       {workInfo.map((work) => (
         <div
-          className=" even:bg-lightgreen even:text-mediumgreen  odd:bg-ljusrosa odd:text-darkpink flex flex-row h-fit md:w-1/5 w-screen md:mx-5 drop-shadow-2xl cursor-pointer"
+          className=" even:bg-lightgreen even:text-mediumgreen  odd:bg-white odd:text-gray-400  flex flex-row h-fit md:w-1/5 w-screen my-2 md:mx-5 drop-shadow-2xl cursor-pointer"
           key={work.id}
           onClick={() => handleObjektClick(work)}
         >
