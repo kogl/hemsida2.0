@@ -4,8 +4,11 @@ import { React } from "react";
 import { motion, useScroll } from "framer-motion";
 
 // import "../animate.css";
+import { useSelector } from "react-redux";
 
 const Start = () => {
+  const isSwe = useSelector((state) => state.language.isSwe);
+
   const variants = {
     offscreen: {
       y: -300,
@@ -27,7 +30,7 @@ const Start = () => {
   };
   return (
     <motion.div
-      className="flex flex-col h-max w-screen "
+      className="flex flex-col h-max w-screen drop-shadow-2xl "
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: false, amount: 0.8 }}
@@ -44,12 +47,22 @@ const Start = () => {
         </div>
         <div className="bg-lightgreen h-screen w-screen justify-center items-end flex">
           <div className="flex flex-col w-full h-1/5 md:h-2/5  bg-vitt  justify-end items-center rounded-tr-full  font-myfont4 text-liten  md:text-rubrik">
-            <h1 className=" cursor-none">
-              MER
-            </h1>
-            <h1 className="cursor-none	">
-              OM
-            </h1>
+            {isSwe ? (
+              <div className="font-myfont4 text-liten  md:text-rubrik flex flex-col justify-center items-center w-full cursor-none">
+                <h1 className=" cursor-none">MER</h1>
+                <h1 className="cursor-none	">OM</h1>
+              </div>
+            ) : (
+              <div className="">
+                <h1 className="font-myfont4 text-liten  md:text-rubrik flex flex-col justify-center items-center w-full cursor-none">
+                  MORE
+                </h1>
+                <h1 className="font-myfont4 text-liten  md:text-rubrik flex flex-col justify-center items-center w-full cursor-none">
+                  ABOUT
+                </h1>
+              </div>
+            )}
+
             <motion.div className="cursor-pointer">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

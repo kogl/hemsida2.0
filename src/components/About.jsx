@@ -1,8 +1,12 @@
 import React from "react";
 import AboutText from "./AboutText";
 
+import { useSelector } from "react-redux";
+// import { setIsSwe } from "../redux/language";
 // import { motion } from "framer-motion";
 const About = () => {
+  const isSwe = useSelector((state) => state.language.isSwe);
+
   return (
     <div className="h-screen bg-lightgreen flex flex-row">
       <div className=" w-1/3 h-screen flex-col justify-start flex items-end">
@@ -10,9 +14,15 @@ const About = () => {
       </div>
 
       <div className="bg-vitt flex-col w-1/3 justify-center items-start h-screen rounded-br-full">
-        <h1 className="font-myfont4 text-liten  md:text-rubrik flex flex-col justify-center items-center w-full cursor-none">
-          MIG
-        </h1>
+        {isSwe ? (
+          <h1 className="font-myfont4 text-liten  md:text-rubrik flex flex-col justify-center items-center w-full cursor-none">
+            MIG
+          </h1>
+        ) : (
+          <h1 className="font-myfont4 text-liten  md:text-rubrik flex flex-col justify-center items-center w-full cursor-none">
+            ME
+          </h1>
+        )}
       </div>
 
       <div className="justify-center items-start text-about flex flex-col">

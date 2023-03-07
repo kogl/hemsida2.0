@@ -1,13 +1,17 @@
-import React, { useState } from "react";
-import { useDispatch, useSelector } from 'react-redux';
-import { toggleLang } from '../redux/languge';
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setIsSwe } from "../redux/language";
 const MenuList = () => {
-//   const [isSwe, setIsSwe] = useState(true);
-//   const toggleMenu = () => {
-//     setIsSwe(!isSwe);
-//   };
-const dispatch = useDispatch();
-const isSwe = useSelector(state => state.langugeSlice.isSwe);
+  //   const [isSwe, setIsSwe] = useState(true);
+  //   const toggleMenu = () => {
+  //     setIsSwe(!isSwe);
+  //   };
+  const dispatch = useDispatch();
+  const isSwe = useSelector((state) => state.language.isSwe);
+
+  const toggleLanguage = () => {
+    dispatch(setIsSwe(!isSwe));
+  };
   return (
     <div className="font-myfont2 text-4xl  flex flex-col justify-center items-center mt-24  cursor-pointer">
       <div className="flex flex-row justify-center items-center py-3">
@@ -92,15 +96,19 @@ const isSwe = useSelector(state => state.langugeSlice.isSwe);
           <p className="pl-3 hidden md:block">Contact</p>
         )}
       </div>
-      <div className="flex flex-col justify-center items-end sm:items-center mt-10">
+      <div
+        className="flex flex-col justify-center items-end sm:items-center mt-10"
+        onClick={() => dispatch(toggleLanguage())}
+      >
+
         {isSwe ? (
-          <div className="flex flex-row " onClick={() => dispatch(toggleLang())}>
+          <div className="flex flex-row ">
             <p className="text-lightgreen">SV</p>
             <p className="text-black">||</p>
             <p className="text-vitt">EN</p>
           </div>
         ) : (
-          <div className="flex flex-row " onClick={() => dispatch(toggleLang())}>
+          <div className="flex flex-row ">
             <p className="text-vitt">SV</p>
             <p className="text-black">||</p>
             <p className="text-lightgreen">EN</p>

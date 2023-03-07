@@ -1,14 +1,29 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 const Kontakt = () => {
+  const isSwe = useSelector((state) => state.language.isSwe);
+
   return (
     <div className="h-fit w-screen bg-white flex-row">
       <div className="text-svart h-screen w-screen justify-evenly items-center flex flex-row text-center md:bg-wave4 md:bg-no-repeat md:bg-cover ">
-        <div className=" ">
-          <p className="text-liten md:text-rubrik font-myfont4 ">Kontakt</p>
-        </div>
+        {isSwe ? (
+          <div className=" ">
+            <p className="text-liten md:text-rubrik font-myfont4 ">Kontakt</p>
+          </div>
+        ) : (
+          <div className=" ">
+            <p className="text-liten md:text-rubrik font-myfont4 ">Contact</p>
+          </div>
+        )}
+
         <div className=" flex-col w-1/2 ">
-          <div className="text-xl font-myfont2 ">Kontakta mig!</div>
+          {isSwe ? (
+            <div className="text-xl font-myfont2 ">Kontakta mig!</div>
+          ) : (
+            <div className="text-xl font-myfont2 ">Contact Me</div>
+          )}
+
           <div className="flex flex-row justify-evenly ">
             <div className="bg-vitt rounded-full px-2 py-2 mr-2 cursor-pointer">
               <svg
