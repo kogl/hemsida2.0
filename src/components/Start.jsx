@@ -30,15 +30,15 @@ const Start = () => {
   };
   return (
     <motion.div
-      className="flex flex-col h-max w-screen drop-shadow-2xl "
+      className="flex flex-col h-max w-screen  "
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: false, amount: 0.8 }}
     >
       {/* <Header /> */}
-      <div className="h-screen w-screen bg-brown-700 flex flex-row">
+      <div className="h-screen w-screen  flex flex-row">
         <div className="bg-lightgreen h-screen w-screen justify-end items-end flex flex-col ">
-          <div className="justify-center items-center flex-col flex text-vitt w-full h-2/5 font-myfont3 font-bold text-side drop-shadow-lg">
+          <div className="justify-center items-center flex-col flex text-vitt w-full h-2/5 font-myfont3 font-bold text-side ">
             {/* <h1 className=''>Design,</h1>
 				<h1>Develop</h1>
 				<h1>Deliver</h1> */}
@@ -84,7 +84,7 @@ const Start = () => {
 
         <div className="bg-lightgreen h-screen w-screen flex justify-center items-center">
           <motion.div
-            className="bg-white rounded-full md:h-96 md:w-96 h-44 w-44 bg-center bg-cover bg-bgme bg-no-repeat drop-shadow-2xl"
+            className="bg-white rounded-full md:h-96 md:w-96 h-44 w-44 bg-center bg-cover bg-bgme bg-no-repeat "
             variants={variants}
           ></motion.div>
         </div>

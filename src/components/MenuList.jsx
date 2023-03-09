@@ -1,20 +1,28 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setIsSwe } from "../redux/language";
+import { setIsOpen } from "../redux/menu";
+
 const MenuList = () => {
-  //   const [isSwe, setIsSwe] = useState(true);
-  //   const toggleMenu = () => {
-  //     setIsSwe(!isSwe);
-  //   };
   const dispatch = useDispatch();
+
   const isSwe = useSelector((state) => state.language.isSwe);
 
   const toggleLanguage = () => {
     dispatch(setIsSwe(!isSwe));
   };
+
+  const isOpen = useSelector((state) => state.menu.isOpen);
+
+  const toggleMenu = () => {
+    dispatch(setIsOpen(!isOpen));
+  };
   return (
     <div className="font-myfont2 text-4xl  flex flex-col justify-center items-center mt-24  cursor-pointer">
-      <div className="flex flex-row justify-center items-center py-3">
+      <div
+        className="flex flex-row justify-center items-center py-3"
+        onClick={toggleMenu}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -35,7 +43,11 @@ const MenuList = () => {
           <p className="pl-3 hidden md:block">Home</p>
         )}
       </div>
-      <div className="flex flex-row justify-center items-center  py-3">
+
+      <div
+        className="flex flex-row justify-center items-center  py-3"
+        onClick={toggleMenu}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -56,7 +68,10 @@ const MenuList = () => {
           <p className="pl-3 hidden md:block">How Im I</p>
         )}
       </div>
-      <div className="flex flex-row justify-center items-center  py-3">
+      <div
+        className="flex flex-row justify-center items-center  py-3"
+        onClick={toggleMenu}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -75,7 +90,10 @@ const MenuList = () => {
         <p className="pl-3 hidden md:block">CV</p>
       </div>
       {/* <div className="">Portfolio</div> */}
-      <div className="flex flex-row justify-center items-center  py-3">
+      <div
+        className="flex flex-row justify-center items-center  py-3"
+        onClick={toggleMenu}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -99,8 +117,9 @@ const MenuList = () => {
       <div
         className="flex flex-col justify-center items-end sm:items-center mt-10"
         onClick={() => dispatch(toggleLanguage())}
-      >
+		// onMouseUp={toggleMenu}
 
+      >
         {isSwe ? (
           <div className="flex flex-row ">
             <p className="text-lightgreen">SV</p>

@@ -1,25 +1,25 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { motion, useScroll } from "framer-motion";
+import { useDispatch, useSelector } from "react-redux";
+
+import { setSelectedUtb, clearSelectedUtb } from "../redux/utb";
 
 const schoolInfo = [
   {
     id: 1,
-    // place: "Jensen Yrekeshögskolan",
     place: "Jensen",
-    // yrke: "Frontendutveckling o websäkerhet	",
-    yrke: "Frontend websäkerhet	",
-
+    yrke: "Frontend websäkerhet",
     points: [
       "- JavaScript-programmering ",
       "- Frontendutveckling",
-      "-  Avancerad webbutveckling med JavaScript Paketering.",
+      "- Avancerad webbutveckling med JavaScript Paketering.",
       "- Vue,Node,HTML, CSS.",
     ],
   },
   {
     id: 2,
     place: "Lexicon",
-    yrke: "Netutveckling",
+    yrke: ".Netutveckling",
     // desc: "hata ajk",
     points: [
       "- Applikationsutveckling",
@@ -61,12 +61,87 @@ const schoolInfo = [
     id: 6,
     place: "Infokomp",
     // yrke: "It, Kommunikation och Ledarskap(Gymnasiet)",
-    yrke: "It,  Kommunikation ...",
+    yrke: "IT &  Kommunikation ...",
     points: ["- Samhällsprogram med IT inriktning  ."],
   },
 ];
+
 const UtbList = () => {
-  const [selectedObjekt, setSelectedObjekt] = useState(null);
+  const dispatch = useDispatch();
+  const selectedUtb = useSelector((state) => state.utb.selectedUtb);
+
+  const handleObjektClick = (utb) => {
+    if (selectedUtb === utb) {
+      dispatch(clearSelectedUtb());
+    } else {
+      dispatch(setSelectedUtb(utb));
+    }
+  };
+  //   const selectedObjekt = useSelector(selectedObjektSelector);
+//   const isSwe = useSelector((state) => state.language.isSwe);
+
+  // : [
+  //     {
+  //       id: 1,
+  //       place: "Jensen",
+  //       yrke: "Frontend web security",
+  //       points: [
+  //         "- JavaScript programming",
+  //         "- Front-end development",
+  //         "- Advanced web development with JavaScript packaging.",
+  //         "- Vue, Node, HTML, CSS.",
+  //       ],
+  //     },
+  //     {
+  //       id: 2,
+  //       place: "Lexicon",
+  //       yrke: ".NET development",
+  //       points: [
+  //         "- Application development",
+  //         "- Git version control",
+  //         "- C#/.NET",
+  //         "- Introduction to ASP.NET MVC",
+  //         "- Object-oriented C#",
+  //       ],
+  //     },
+  //     {
+  //       id: 3,
+  //       place: "Nackademin",
+  //       yrke: "Application Development",
+  //       points: [
+  //         "- Application development with Swift/iOS.",
+  //         "- Scrum.",
+  //         "- HTML, JS, CSS.",
+  //       ],
+  //     },
+  //     {
+  //       id: 4,
+  //       place: "Södertörns",
+  //       yrke: "Media Technology A & B",
+  //       points: [
+  //         "- Photo and photo editing with Adobe Photoshop.",
+  //         "- Layout with Adobe Illustrator.",
+  //         "- Video editing with Adobe Premiere and After Effects.",
+  //       ],
+  //     },
+  //     {
+  //       id: 5,
+  //       place: "Örebro University",
+  //       yrke: "Media Design",
+  //       points: [
+  //         "- Film making.",
+  //         "- Short films, music videos.",
+  //         "- Sound design.",
+  //       ],
+  //     },
+  //     {
+  //       id: 6,
+  //       place: "Infokomp",
+  //       yrke: "IT & Communication ...",
+  //       points: ["- Social Science Program with IT focus."],
+  //     },
+  //   ];
+  //   const [selectedObjekt, setSelectedObjekt] = useState(null);
 
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ container: ref });
@@ -91,13 +166,13 @@ const UtbList = () => {
     },
   };
 
-  const handleObjektClick = (school) => {
-    if (selectedObjekt === school) {
-      setSelectedObjekt(null);
-    } else {
-      setSelectedObjekt(school);
-    }
-  };
+  //   const handleObjektClick = (school) => {
+  //     if (selectedObjekt === school) {
+  //       dispatch(selectObjekt(null));
+  //     } else {
+  //       dispatch(selectObjekt(school));
+  //     }
+  //   };
 
   return (
     <div className="h-fit w-screen flex-col flex justify-center items-center">
@@ -136,17 +211,16 @@ const UtbList = () => {
               </svg>
             </div>
 
-            {selectedObjekt === school && (
+            {selectedUtb === school && (
               <div className="h-fit">
                 {school.points.map((point) => (
                   <div className="" key={school.id}>
-					{point}
-				  </div>
+                    {point}
+                  </div>
                 ))}
               </div>
             )}
           </div>
-          {/* ))} */}
         </motion.div>
       ))}
     </div>

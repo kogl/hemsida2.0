@@ -1,4 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { setSelectedWork, clearSelectedWork } from '../redux/work';
+
+// import React, { useState } from "react";
+
 const workInfo = [
   {
     id: 1,
@@ -74,14 +79,27 @@ const workInfo = [
   },
 ];
 const WorkList = () => {
-  const [selectedWork, setSelectedWork] = useState(null);
+//   const [selectedWork, setSelectedWork] = useState(null);
+//   const handleObjektClick = (work) => {
+//     if (selectedWork === work) {
+//       setSelectedWork(null);
+//     } else {
+//       setSelectedWork(work);
+//     }
+//   };
+
+const selectedWork = useSelector((state) => state.work.selectedWork);
+const dispatch = useDispatch();
+
   const handleObjektClick = (work) => {
     if (selectedWork === work) {
-      setSelectedWork(null);
+      dispatch(clearSelectedWork());
     } else {
-      setSelectedWork(work);
+      dispatch(setSelectedWork(work));
     }
   };
+
+
   return (
     <div className="h-fit md:h-1/2 md:w-screen md:flex-row md:flex  justify-center items-center ">
       {workInfo.map((work) => (

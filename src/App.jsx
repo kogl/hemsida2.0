@@ -15,9 +15,9 @@ function App() {
       <Header />
       <Start />
       <About />
-      {/* <Work />
+      <Work />
       <Utbildning />
-      <Ovrigt /> */}
+      {/* <Ovrigt /> */}
       <Kontakt />
     </div>
   );

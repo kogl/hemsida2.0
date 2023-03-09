@@ -1,32 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 import { motion } from "framer-motion";
 import MenuList from "./MenuList";
+import { setIsOpen } from "../redux/menu";
 
 // import "../App.css";
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  //   const [isVisible, setIsVisible] = useState(true);
+  const dispatch = useDispatch();
 
-  //   useEffect(() => {
-  //     const handleScroll = () => {
-  //       if (window.pageYOffset > 0) {
-  //         setIsVisible(true);
-  //       } else {
-  //         setIsVisible(false);
-  //       }
-  //     };
-
-  //     window.addEventListener("scroll", handleScroll);
-
-  //     return () => {
-  //       window.removeEventListener("scroll", handleScroll);
-  //     };
-  //   }, []);
+  const isOpen = useSelector((state) => state.menu.isOpen);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
+    dispatch(setIsOpen(!isOpen));
   };
 
   const variants = {
@@ -35,7 +22,7 @@ const Header = () => {
   };
 
   return (
-<div className="w-screen items-center justify-between md:h-36 h-12 flex flex-row drop-shadow-2xl fixed top-0 left-0 right-0 z-50">
+    <div className="w-screen items-center justify-between md:h-36 h-12 flex flex-row drop-shadow-2xl fixed top-0 left-0 right-0 z-50">
       <div className="fixed top-0 w-full text-black ml-4 font-myfont4 text-sm md:text-lg flex flex-row ">
         <div className="justify-start items-end text-vitt ">
           Oskar Ljungdahl
@@ -65,7 +52,7 @@ const Header = () => {
             strokeWidth="1"
             stroke="white"
             className="w-10 h-10 z-50 fixed right-5 top-5 pa-4 bg-lightgreen rounded-full cursor-pointer"
-            onClick={toggleMenu}
+            onClick={() => dispatch(toggleMenu())}
           >
             <path
               strokeLinecap="round"
