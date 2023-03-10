@@ -9,7 +9,10 @@ const About = () => {
 
   return (
     <div className="h-screen bg-lightgreen flex flex-row">
-      <div className=" w-1/3 h-screen flex-col justify-start flex items-end">
+      <div
+        className=" w-1/3 h-screen flex-col justify-start flex items-end"
+        id="about"
+      >
         <div className="bg-vitt rounded-bl-full h-1/2 w-1/2"></div>
       </div>
 

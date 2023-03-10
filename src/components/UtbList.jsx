@@ -4,6 +4,18 @@ import { useDispatch, useSelector } from "react-redux";
 
 import { setSelectedUtb, clearSelectedUtb } from "../redux/utb";
 
+const eng = [{
+	id:1,
+	place: "Jensen",
+	yrke: "hata aik ",
+    points: [
+      "- JavaScript-programmering ",
+      "- Frontendutveckling",
+      "- Avancerad webbutveckling med JavaScript Paketering.",
+      "- Vue,Node,HTML, CSS.",
+    ],
+}];
+
 const schoolInfo = [
   {
     id: 1,
@@ -77,8 +89,8 @@ const UtbList = () => {
       dispatch(setSelectedUtb(utb));
     }
   };
-  //   const selectedObjekt = useSelector(selectedObjektSelector);
-//   const isSwe = useSelector((state) => state.language.isSwe);
+
+  //   const isSwe = useSelector((state) => state.language.isSwe);
 
   // : [
   //     {
@@ -141,7 +153,6 @@ const UtbList = () => {
   //       points: ["- Social Science Program with IT focus."],
   //     },
   //   ];
-  //   const [selectedObjekt, setSelectedObjekt] = useState(null);
 
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({ container: ref });
@@ -166,16 +177,11 @@ const UtbList = () => {
     },
   };
 
-  //   const handleObjektClick = (school) => {
-  //     if (selectedObjekt === school) {
-  //       dispatch(selectObjekt(null));
-  //     } else {
-  //       dispatch(selectObjekt(school));
-  //     }
-  //   };
+  
 
   return (
     <div className="h-fit w-screen flex-col flex justify-center items-center">
+		
       {schoolInfo.map((school) => (
         <motion.div
           className=" even:bg-lightgreen even:text-darkgreen  odd:bg-white odd:text-gray-400  flex flex-col h-fit w-screen md:w-1/2 my-1 drop-shadow-2xl cursor-pointer "
@@ -212,7 +218,7 @@ const UtbList = () => {
             </div>
 
             {selectedUtb === school && (
-              <div className="h-fit">
+              <div className="h-fit px-4 z-10">
                 {school.points.map((point) => (
                   <div className="" key={school.id}>
                     {point}

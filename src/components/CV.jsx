@@ -7,13 +7,11 @@ import Ovrigt from "./Ovrigt";
 
 const CV = () => {
   return (
-    <div className="h-screen w-screen ">
-  
+    <div className="h-screen w-screen">
       <Work />
       <Utbildning />
-	  <Ovrigt/>
+      <Ovrigt />
       {/* <Portfolio /> */}
-	  
     </div>
   );
 };

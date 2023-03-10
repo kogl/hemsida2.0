@@ -7,7 +7,7 @@ const Utbildning = () => {
   const isSwe = useSelector((state) => state.language.isSwe);
 
   return (
-    <div className="w-screen h-fit flex flex-col md:flex-row justify-center items-center  md:items-start bg-lightgreen bg-no-repeat bg-cover bg-center md:bg-wave2">
+    <div className="w-screen h-screen flex flex-col md:flex-row justify-center items-center  md:items-start bg-lightgreen bg-no-repeat bg-cover bg-center md:bg-wave2">
       {/* <div className=""> */}
 
       {isSwe ? (

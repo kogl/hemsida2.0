@@ -33,7 +33,7 @@ const workInfo = [
     yrke: "Lagermedarbetare",
     besk: "Jag har erfarenhet av att utföra fysiskt arbete, inklusive lyftning och flyttning av föremål. Dessutom har jag utvecklat färdigheter inom organisering och har erfarenhet av att hålla ordning på lagerlokalen och varulagren.",
     points: [
-      "- Fysiskt arbete - att kunna utföra fysiskt arbete som att lyfta och flytta föremål.",
+      "- Fysiskt arbete ",
       "- Organisering - att kunna organisera och hålla ordning på lagerlokalen och varulagren.",
     ],
   },
@@ -113,14 +113,14 @@ const dispatch = useDispatch();
             <p className="font-myfont3 text-base md:text-lg py-0 px-2">
               {work.place}
             </p>
-            <div className="p-3 flex flex-row">
+            <div className="p-3 flex flex-col">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
-                className="w-6 h-6"
+                className="w-6 h-6 rotate-90 flex justify-center items-center"
               >
                 <path
                   strokeLinecap="round"
@@ -129,7 +129,7 @@ const dispatch = useDispatch();
                 />
               </svg>
               {selectedWork === work && (
-                <div className="">
+                <div className="  ">
                   {work.points.map((point) => (
                     <div className="" key={work.id}>
                       {point}

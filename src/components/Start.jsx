@@ -1,7 +1,7 @@
 // import { React, useRef } from "react";
 import { React } from "react";
 // import Header from "./Header";
-import { motion, useScroll } from "framer-motion";
+import { motion,  } from "framer-motion";
 
 // import "../animate.css";
 import { useSelector } from "react-redux";
@@ -34,8 +34,8 @@ const Start = () => {
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: false, amount: 0.8 }}
+	  id='hej'
     >
-      {/* <Header /> */}
       <div className="h-screen w-screen  flex flex-row">
         <div className="bg-lightgreen h-screen w-screen justify-end items-end flex flex-col ">
           <div className="justify-center items-center flex-col flex text-vitt w-full h-2/5 font-myfont3 font-bold text-side ">
