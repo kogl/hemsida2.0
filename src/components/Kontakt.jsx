@@ -33,11 +33,10 @@ const Kontakt = () => {
   const isSwe = useSelector((state) => state.language.isSwe);
 
   return (
-    <div className="h-fit w-screen bg-white flex-row">
+    <div className="h-fit w-screen bg-white md:flex-row flex flex-col">
       <div
-        className="text-svart h-screen w-screen justify-evenly items-center flex flex-row text-center md:bg-wave4 md:bg-no-repeat md:bg-cover "
-        id="kontakt"
-      >
+        className="h-screen w-screen items-center justify-center flex flex-col md:flex-row  md:items-center md:bg-wave4 md:bg-no-repeat md:bg-cover "
+        id="kontakt">
         <div className="cursor-none">
           {isSwe ? (
             <p className="text-liten md:text-rubrik font-myfont4 ">Kontakt</p>
@@ -46,14 +45,8 @@ const Kontakt = () => {
           )}
         </div>
 
-        <div className=" flex-col w-1/2 ">
-          {/* {isSwe ? (
-            <div className="text-xl font-myfont2 ">Kontakta mig!</div>
-          ) : (
-            <div className="text-xl font-myfont2 ">Contact Me</div>
-          )} */}
-
-          <div className="flex flex-row justify-evenly ">
+        <div className=" flex-col w-1/2 items-center">
+          <div className="flex flex-row justify-evenly">
             <a href="tel:+46707123901">
               <div className="bg-vitt rounded-full px-2 py-2 mr-2 cursor-pointer">
                 <motion.svg

@@ -1,6 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setSelectedWork, clearSelectedWork } from '../redux/work';
+import { motion, useScroll } from "framer-motion";
 
 // import React, { useState } from "react";
 
@@ -78,15 +79,35 @@ const workInfo = [
     ],
   },
 ];
+
+
+const variants = {
+    // offscreen: {
+    //   opacity: 0,
+    //   transition: {
+    //     type: "spring",
+    //     duration: scrollYProgress,
+    //   },
+    // },
+    // onscreen: {
+    //   scaleY: 1,
+    //   opacity: 1,
+
+    //   transition: {
+    //     type: "spring",
+    //     // duration: scrollYProgress,
+    //     delay: 0.3,
+    //   },
+    // },
+    hover: {
+      scale: 1.1,
+      transition: {
+        duration: 0.3,
+        yoyo: Infinity,
+      },
+    },
+  };
 const WorkList = () => {
-//   const [selectedWork, setSelectedWork] = useState(null);
-//   const handleObjektClick = (work) => {
-//     if (selectedWork === work) {
-//       setSelectedWork(null);
-//     } else {
-//       setSelectedWork(work);
-//     }
-//   };
 
 const selectedWork = useSelector((state) => state.work.selectedWork);
 const dispatch = useDispatch();
@@ -103,17 +124,19 @@ const dispatch = useDispatch();
   return (
     <div className="h-fit md:h-1/2 md:w-screen md:flex-row md:flex  justify-center items-center ">
       {workInfo.map((work) => (
-        <div
+        <motion.div
           className=" even:bg-lightgreen even:text-mediumgreen  odd:bg-white odd:text-gray-400  flex flex-row h-fit md:w-1/5 w-screen my-2 md:mx-5 drop-shadow-2xl cursor-pointer"
           key={work.id}
           onClick={() => handleObjektClick(work)}
+		  variants={variants}
+		  whileHover='hover'
         >
           <div className="px-3 flex-col flex ">
             <h3 className="font-myfont3 md:text- px-2 pt-2">{work.yrke}</h3>
             <p className="font-myfont3 text-base md:text-lg py-0 px-2">
               {work.place}
             </p>
-            <div className="p-3 flex flex-col">
+            <div className="p-3 flex  justify-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -139,7 +162,7 @@ const dispatch = useDispatch();
               )}
             </div>
           </div>
-        </div>
+        </motion.div>
       ))}
     </div>
   );

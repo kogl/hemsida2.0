@@ -17,7 +17,7 @@ function App() {
       <About />
       <Work />
       <Utbildning />
-      {/* <Ovrigt /> */}
+      <Ovrigt />
       <Kontakt />
     </div>
   );

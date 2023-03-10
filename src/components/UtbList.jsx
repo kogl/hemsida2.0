@@ -1,20 +1,22 @@
 import React, { useRef } from "react";
-import { motion, useScroll } from "framer-motion";
+import { motion, useScroll } from "framer-motion";	
 import { useDispatch, useSelector } from "react-redux";
 
 import { setSelectedUtb, clearSelectedUtb } from "../redux/utb";
 
-const eng = [{
-	id:1,
-	place: "Jensen",
-	yrke: "hata aik ",
-    points: [
-      "- JavaScript-programmering ",
-      "- Frontendutveckling",
-      "- Avancerad webbutveckling med JavaScript Paketering.",
-      "- Vue,Node,HTML, CSS.",
-    ],
-}];
+// const eng = [
+//   {
+//     id: 1,
+//     place: "Jensen",
+//     yrke: "hata aik ",
+//     points: [
+//       "- JavaScript-programmering ",
+//       "- Frontendutveckling",
+//       "- Avancerad webbutveckling med JavaScript Paketering.",
+//       "- Vue,Node,HTML, CSS.",
+//     ],
+//   },
+// ];
 
 const schoolInfo = [
   {
@@ -168,11 +170,21 @@ const UtbList = () => {
     onscreen: {
       scaleY: 1,
       opacity: 1,
+	  zIndex: 1,
 
       transition: {
         type: "spring",
         duration: scrollYProgress,
         delay: 0.3,
+      },
+    },
+    hover: {
+      scale: 1.1,
+      transition: {
+        duration: 0.3,
+        yoyo: Infinity,
+		zIndex: 100,
+
       },
     },
   };
@@ -181,7 +193,6 @@ const UtbList = () => {
 
   return (
     <div className="h-fit w-screen flex-col flex justify-center items-center">
-		
       {schoolInfo.map((school) => (
         <motion.div
           className=" even:bg-lightgreen even:text-darkgreen  odd:bg-white odd:text-gray-400  flex flex-col h-fit w-screen md:w-1/2 my-1 drop-shadow-2xl cursor-pointer "
@@ -189,18 +200,19 @@ const UtbList = () => {
           whileInView="onscreen"
           viewport={{ once: false, amount: 0.8 }}
           variants={variants}
+		  whileHover='hover'
           key={school.id}
           ref={ref}
           onClick={() => handleObjektClick(school)}
         >
-          <div className="px-3 flex flex-col">
+          <div className="px-3 flex flex-col my-1">
             <h3 className="font-myfont3 md:text-2xl px-2 pt-2">
               {school.place}
             </h3>
             <p className="font-myfont3 text-base md:text-lg py-0 px-2">
               {school.yrke}
             </p>
-            <div className="px-3 pb-2">
+            <div className="px-3 pb-2 flex justify-center rotate-90">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
