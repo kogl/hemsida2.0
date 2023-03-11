@@ -1,5 +1,5 @@
 import React from "react";
-import AboutText from "./AboutText";
+import AboutText from "../About/AboutText";
 
 import { useSelector } from "react-redux";
 // import { setIsSwe } from "../redux/language";

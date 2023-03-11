@@ -1,13 +1,13 @@
 import React from "react";
 import "./App.css";
-import Header from "./components/Header";
-import Start from "./components/Start";
-import About from "./components/About";
+import Header from "./components/Header/Header";
+import Start from "./components/Start/Start";
+import About from "./components/About/About";
 
-import Work from "./components/Work";
-import Utbildning from "./components/Utbildning";
-import Kontakt from "./components/Kontakt";
-import Ovrigt from "./components/Ovrigt";
+import Work from "./components/Work/Work";
+import Utbildning from "./components/Education/Utbildning";
+import Kontakt from "./components/Contact/Kontakt";
+import Ovrigt from "./components/Ovrigt/Ovrigt";
 
 function App() {
   return (

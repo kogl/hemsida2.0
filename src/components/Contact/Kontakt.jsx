@@ -36,7 +36,8 @@ const Kontakt = () => {
     <div className="h-fit w-screen bg-white md:flex-row flex flex-col">
       <div
         className="h-screen w-screen items-center justify-center flex flex-col md:flex-row  md:items-center md:bg-wave4 md:bg-no-repeat md:bg-cover "
-        id="kontakt">
+        id="kontakt"
+      >
         <div className="cursor-none">
           {isSwe ? (
             <p className="text-liten md:text-rubrik font-myfont4 ">Kontakt</p>
@@ -56,8 +57,7 @@ const Kontakt = () => {
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  width="42"
-                  height="42"
+                  className="w-6 h-6 md:h-24 md:w-24"
                 >
                   <motion.path
                     strokeLinecap="round"
@@ -79,8 +79,7 @@ const Kontakt = () => {
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  width="42"
-                  height="42"
+                  className="w-6 h-6 md:h-24 md:w-24"
                 >
                   <motion.path
                     variants={svgPathVariants}
@@ -102,11 +101,9 @@ const Kontakt = () => {
               >
                 <svg
                   aria-hidden="true"
-                  className="octicon octicon-mark-github"
-                  height="42"
+                  className="octicon octicon-mark-github w-6 h-6 md:h-24 md:w-24 "
                   version="1.1"
                   viewBox="0 0 16 16"
-                  width="42"
                 >
                   <path
                     fillRule="evenodd"
@@ -126,13 +123,44 @@ const Kontakt = () => {
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  width="42"
-                  height="42"
+                  className="w-6 h-6 md:h-24 md:w-24"
                   viewBox="0 0 24 24"
                 >
                   <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
                 </svg>
               </motion.div>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/oskar-ljungdahl-503037137/"
+              target="_blank"
+            >
+              <motion.div
+                className="bg-vitt rounded-full px-2 py-2 mr-2 cursor-pointer"
+                variants={buttonVariants}
+                whileHover="hover"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  className="w-6 h-6 md:h-24 md:w-24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m.75 12l3 3m0 0l3-3m-3 3v-6m-1.5-9H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"
+                  />
+                </svg>
+              </motion.div>
+
+
+              {isSwe ? (
+                <h1 className="text-center text-myfont2">Ladda ner CV</h1>
+              ) : (
+                <h1 className="text-center text-myfont2">Download CV</h1>
+              )}
             </a>
           </div>
         </div>

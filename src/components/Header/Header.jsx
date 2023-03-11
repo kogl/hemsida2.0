@@ -2,8 +2,8 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import { motion } from "framer-motion";
-import MenuList from "./MenuList";
-import { setIsOpen } from "../redux/menu";
+import MenuList from "../Header/MenuList";
+import { setIsOpen } from "../../redux/menu";
 
 // import "../App.css";
 

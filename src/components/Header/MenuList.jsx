@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setIsSwe } from "../redux/language";
-import { setIsOpen } from "../redux/menu";
+import { setIsSwe } from "../../redux/language";
+import { setIsOpen } from "../../redux/menu";
 
 const MenuList = () => {
   const dispatch = useDispatch();
