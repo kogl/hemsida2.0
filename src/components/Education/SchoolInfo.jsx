@@ -60,4 +60,7 @@ const schoolInfo = [
 	},
   ];
 
+
+
+
 export default schoolInfo

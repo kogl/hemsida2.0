@@ -3,9 +3,9 @@ import { motion, useScroll } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
 
 import { setSelectedUtb, clearSelectedUtb } from "../../redux/utb";
-import schoolInfo from "../Education/SchoolInfo";
+import schoolInfoEng from "../Education/SchoolInfoEng";
 
-const UtbList = () => {
+const UtbListEng = () => {
   const dispatch = useDispatch();
   const selectedUtb = useSelector((state) => state.utb.selectedUtb);
 
@@ -118,7 +118,7 @@ const UtbList = () => {
 
   return (
     <div className="h-fit w-screen flex-col flex justify-center items-center">
-      {schoolInfo.map((school) => (
+      {schoolInfoEng.map((school) => (
         <motion.div
           className=" even:bg-lightgreen even:text-darkgreen  odd:bg-white odd:text-gray-400  flex flex-col h-fit w-screen md:w-1/2 my-1 drop-shadow-2xl cursor-pointer "
           initial="offscreen"
@@ -170,4 +170,4 @@ const UtbList = () => {
   );
 };
 
-export default UtbList;
+export default UtbListEng;

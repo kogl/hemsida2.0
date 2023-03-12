@@ -67,6 +67,11 @@ module.exports = withMT({
 
 					lineHeight: '0.8'   // custom line height
 				}],
+				'sideSmall': ['2rem', {
+					letterSpacing: '-0.11em', // custom letter spacing
+
+					lineHeight: '0.8'   // custom line height
+				}],
 				'side': ['9rem', {
 					letterSpacing: '-0.11em', // custom letter spacing
 

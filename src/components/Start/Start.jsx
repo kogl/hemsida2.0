@@ -1,7 +1,7 @@
 // import { React, useRef } from "react";
 import { React } from "react";
 // import Header from "./Header";
-import { motion,  } from "framer-motion";
+import { motion } from "framer-motion";
 
 // import "../animate.css";
 import { useSelector } from "react-redux";
@@ -11,7 +11,7 @@ const Start = () => {
 
   const variants = {
     offscreen: {
-      y: -300,
+      y: -1300,
       transition: {
         type: "spring",
         bounce: 0.4,
@@ -20,7 +20,7 @@ const Start = () => {
     },
     onscreen: {
       y: 0,
-      rotate: -10,
+    //   rotate: -10,
       transition: {
         type: "spring",
         bounce: 0.4,
@@ -34,14 +34,14 @@ const Start = () => {
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: false, amount: 0.8 }}
-	  id='hej'
+      id="hej"
     >
       <div className="h-screen w-screen  flex flex-row">
         <div className="bg-lightgreen h-screen w-screen justify-end items-end flex flex-col ">
-          <div className="justify-center items-center flex-col flex text-vitt w-full h-2/5 font-myfont3 font-bold text-side ">
-            {/* <h1 className=''>Design,</h1>
-				<h1>Develop</h1>
-				<h1>Deliver</h1> */}
+          <div className="justify-center items-center flex-col flex text-vitt w-full h-2/5 font-myfont3 font-bold text-sideSmall md:text-side ">
+            <h1 className="">Design,</h1>
+            <h1>Develop</h1>
+            <h1>Deliver</h1>
           </div>
           <div className="w-full h-2/5 bg-vitt  justify-end items-center rounded-tl-full flex flex-col	"></div>
         </div>
